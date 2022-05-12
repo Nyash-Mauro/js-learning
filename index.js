@@ -225,3 +225,63 @@ emotions ("happy", function(num) {
     sound = sound +"!"; 
     return sound; 
 });
+//indexing an array
+var donuts = ["glazed", "powdered", "sprinkled"];
+console.log(donuts[0]); 
+//adding variables
+var donuts = ["glazed", "chocolate frosted", "boston cream", "powdered", "sprinkled", "maple", "coconut", "jelly"];
+
+
+donuts[2] = "cinnamon twist";
+donuts[4] = "salted caramel";
+donuts[5] = "shortcake eclair";
+
+///push
+var donuts = ["glazed", "chocolate frosted", "Boston creme", "glazed cruller", "cinnamon sugar", "sprinkled"];
+donuts.push("powdered")
+
+//pop usage
+var donuts = ["glazed", "chocolate frosted", "Boston creme", "glazed cruller", "cinnamon sugar", "sprinkled", "powdered"];
+donuts.pop(); // the `pop()` method returns "powdered" because "powdered" was the last element on the end of `donuts` 
+
+//splice
+var donuts = ["glazed", "chocolate frosted", "Boston creme", "glazed cruller"];
+donuts.splice(1, 1, "chocolate cruller", "creme de leche"); // removes "chocolate frosted" at index 1 and adds "chocolate cruller" and "creme de leche" starting at index 1
+
+
+//function
+var team = ["Oliver Wood", "Angelina Johnson", "Katie Bell", "Alicia Spinnet", "George Weasley", "Fred Weasley", "Harry Potter"];
+
+function hasEnoughPlayers(arrayInstance) {
+    if (arrayInstance.length >= 7)
+        return true; // true is a boolean value. Do not return a string "true"
+    else 
+        return false; // false is also a boolean value. Do not return a string "false"
+}
+console.log(hasEnoughPlayers(team));
+
+//array looping
+var donuts = ["jelly donut", "chocolate donut", "glazed donut"];
+
+// the variable `i` is used to step through each element in the array
+for (var i = 0; i < donuts.length; i++) {
+    donuts[i] += " hole";
+    donuts[i] = donuts[i].toUpperCase();
+}
+// 
+var donuts = ["jelly donut", "chocolate donut", "glazed donut"];
+
+donuts.forEach(function(donut) {
+  donut += " hole";
+  donut = donut.toUpperCase();
+  console.log(donut);
+});
+
+//map
+var donuts = ["jelly donut", "chocolate donut", "glazed donut"];
+
+var improvedDonuts = donuts.map(function(donut) {
+  donut += " hole";
+  donut = donut.toUpperCase();
+  return donut;
+});
